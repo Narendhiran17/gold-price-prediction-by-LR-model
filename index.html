@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gold Price Prediction</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: #f4f4f4; }
+        input, button { padding: 10px; margin: 10px; font-size: 18px; }
+        button { background-color: blue; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Gold Price Prediction 💰</h1>
+    <form method="post">
+        <label>USD/INR Exchange Rate:</label>
+        <input type="number" name="usd_inr" step="0.01" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction is not none %}
+        <h2>Predicted Gold Price: ₹{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
